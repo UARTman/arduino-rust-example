@@ -7,17 +7,12 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-# Библиотека panic-halt
 panic-halt = "0.2.0"
 
 [dependencies.arduino-uno]
 git = "https://github.com/Rahix/avr-hal"
 rev = "b1aedf824fcb59078f8022d4464b2835ae4bd83a"
-# ^- Библиотеку для работы с Arduino Uno мы стягиваем с git-а, 
-# так что тут нужно указать хэш последнего коммита, который можно найти тут:
-# https://github.com/Rahix/avr-hal/commits/master
 
-# Оптимизации на размер
 [profile.dev]
 panic = "abort"
 lto = true
