@@ -1,0 +1,10 @@
+[build]
+# Укажем описание чипа
+target = "avr-atmega328p.json"
+
+[unstable]
+# Включим кросс-компиляцию OS-независимого куска стандартной библиотеки Rust
+build-std = ["core"]
+
+[target.'cfg(target_arch = "avr")']
+runner = "./flash-linux.sh"
